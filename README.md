@@ -50,7 +50,11 @@ Or install it yourself as:
 ### IPC Client Connection
 
 ```ruby
-client = Ethereum::IpcClient.new("#{ENV['HOME']}/.ethereum_testnet/geth.ipc")
+require 'ethereum'
+
+client = Ethereum::IpcClient.new("#{ENV['HOME']}/.ethereum/geth.ipc")
+
+puts client.protocol_version
 ```
 
 ### Solidity contract compilation and deployment
